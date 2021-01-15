@@ -37,12 +37,17 @@ function getManager() {
 			},
 			{
 				type: "input",
-				name: "officeNum",
+				name: "officeNumber",
 				message: "Office Number:",
 			},
 		])
 		.then((val) => {
-			const manager = new Manager(val.name, val.id, val.email);
+			const manager = new Manager(
+				val.name,
+				val.id,
+				val.email,
+				val.officeNumber
+			);
 			employees.push(manager);
 
 			addEmployee();
